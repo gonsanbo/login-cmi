@@ -1,6 +1,5 @@
 import json
 import hashlib
-import tkinter as tk
 
 with open('credentials_file.json', 'r') as f:
     credentials = json.load(f)
