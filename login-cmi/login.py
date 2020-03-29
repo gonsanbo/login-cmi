@@ -42,12 +42,12 @@ def login_cmi():
     print("---------------------------")
     user = input("Enter your username: ")
     hash_password = encrypt_string(input("Enter your password: "))
-    try:
+    if user in credentials:
         if credentials[user] == hash_password:
             print("You have been logged in")
         else:
             print("Username and password do not match!")
-    except:
+    else:
         print("User does not exist!")
         print("Would you like to create an account?")
         answer = input("[Y]es/[N]o ")
